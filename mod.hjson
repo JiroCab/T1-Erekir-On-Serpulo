@@ -1,0 +1,8 @@
+name: "t1eos"
+displayName: "T1 Erekir on serpulo"
+author: "Rushie Washie"
+description: "T1 erekir units on serpulo bc yes"
+
+version: "1.0"
+minGameVersion: "151.1"
+hidden: false
