@@ -1,8 +1,8 @@
 name: "t1eos"
 displayName: "T1 Erekir on serpulo"
 author: "Rushie Washie"
-description: "T1 erekir units on serpulo bc yes"
+description: "T1 erekir units on serpulo bc yes\n\nUse With `Buildable Core units`by me to allow Evokes in air factories! :3"
 
-version: "1.0"
+version: "1.1"
 minGameVersion: "151.1"
 hidden: false

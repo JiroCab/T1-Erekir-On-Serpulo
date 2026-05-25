@@ -28,6 +28,32 @@ function postLoadContent(){
 	new TechTree.TechNode(Blocks.airFactory.techNode, UnitTypes.elude, req);
 	new TechTree.TechNode(Blocks.navalFactory.techNode, UnitTypes.merui, req);
 	
+
+	let coreToo = false;
+	for(let i = 0; i < Vars.mods.list().size; i++){
+		let m = Vars.mods.list().get(i);
+		if(coreToo) break;
+		
+		if(m.name == "coreunitsbuildable" && m.enabled) coreToo = true;
+
+	}
+	Log.err("evoke:" + coreToo)
+	
+	if(coreToo == true){
+		let evoke = new UnitFactory.UnitPlan(
+		UnitTypes.evoke, 
+	 	60 * 60,
+	 	ItemStack.with(
+			Items.silicon, 100,
+			Items.graphite, 100,
+			Items.titanium, 100
+		));
+		
+		Blocks.airFactory.plans.add(evoke);
+		new TechTree.TechNode(Blocks.airFactory.techNode, UnitTypes.evoke, req);
+		
+
+	}
 }
 
 Events.on(ModContentLoadEvent, () => {
